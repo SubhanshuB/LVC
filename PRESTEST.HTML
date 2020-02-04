@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Live Virtual Class</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <script type="text/javascript">
+            function cal()
+            {
+                var total=0;
+                var a=parseInt(document.getElementById("engmarks").value);
+                var b=parseInt(document.getElementById("mathsmarks").value);
+                var c=parseInt(document.getElementById("hindimarks").value);
+                var d=parseInt(document.getElementById("scimarks").value);
+                total=a+b+c+d;
+                document.getElementById("total").value=total;
+                document.getElementById("percentage").value=total*0.4;
+                //document.getElementById("total").value=total;
+                if(a>b && a>c && a>d)
+                {
+                    document.getElementById("Highscore").value=a;
+                }
+                if(a<b && b>c && b>d)
+                {
+                    document.getElementById("Highscore").value=b;
+                }
+                if(c>b && c>a && c>d)
+                {
+                    document.getElementById("Highscore").value=c;
+                }
+                if(d>b && d>c && a<d)
+                {
+                    document.getElementById("Highscore").value=d;
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <H1>
+                Live Virtual Class
+            </H1>
+        </header>
+        <nav>
+            <p>
+            <a href="index.html">HOME&nbsp; </a>|&nbsp;
+            <a href="PRETEST.html">PRETEST&nbsp;</a>|&nbsp;
+            <a href="Gallery.html">Gallery&nbsp;</a>|&nbsp;
+            <a href="Registration.html">Registration&nbsp;</a>|&nbsp;
+            <a href="Contacts.html">Contacts&nbsp;</a>&nbsp;
+            </p>
+        </nav>
+        <form method="GET">
+            English:&nbsp;<input type="number" id="engmarks" required>&nbsp;
+            Maths:&nbsp;<input type="number" id="mathsmarks" required><br>
+            <br>
+            Hindi:&nbsp;<input type="number" id="hindimarks" required>&nbsp;
+            Science:&nbsp;<input type="number" id="scimarks" required>
+            <br>
+            <br>
+            <h1>Results:</h1><br>
+            <h2>Total Marks:</h2>
+            <input type="number" id="total" readonly></input>
+            <h2>Percentage:</h2><input type="number" id="percentage" readonly></input>&nbsp;&nbsp;            
+            <h2>Highscore:</h2><input type="number" id="Highscore" readonly></input>&nbsp;&nbsp;
+            <br>
+            <br>
+            <input type="button" value="Calculate" onclick="return cal()">
+        </form>
+    </body>
+</html>

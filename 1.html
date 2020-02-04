@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="ggh" onmouseover="mover()" onmouseout="mout()" onkeypress="kpress()"></input>
+        <br><br>
+        <input type="text" id="gh"></input>
+        <br><br>
+        <button onclick="pro()" value="Press to prompt">Press to prompt</button>
+        <br><br>
+        <input type="checkbox" name="ck">Option 1</input>
+        <input type="checkbox" name="ck">Option 2</input>
+        <input type="checkbox" name="ck">Option 3</input>
+        <input type="checkbox" name="ck">Option 4</input>
+        <br><br>
+        <button onclick="checkop()">Check the checkbox</button>
+        <br><br>
+        <select id="gurl">
+            <option value="https://www.yahoo.com">Yahoo</option>
+            <option value="https://www.google.com">Google</option>
+            <option value="https://www.facebook.com">Facebook</option>
+        </select>
+        <button onclick="gourl()">GO</button>
+        <br>
+        <br>
+        <select id="category">
+            <option value="MUSIC">Music</option>
+            <option value="VIDEO">Video</option>            
+            <option value="DANCE">Dance</option>
+        </select>
+        <select id="search">
+            <option value="https://in.search.yahoo.com/search?p=">Yahoo</option>
+            <option value="https://www.google.com/search?q=">Google</option>
+            <option value="https://www.bing.com/search?q=">Bing</option>
+        </select>
+        <button onclick="surl()">GO</button>
+        <br>
+        <br>
+        Name:&nbsp;&nbsp;
+        <input type="text" id="naam"  onkeyup="func1()"></input>&nbsp;
+        <span id="comment" style="color: red;"></span>
+    <script >
+        /*function mout()
+        {
+            alert("For office use only");
+            document.getElementById("gh").focus();
+            document.getElementById("ggh").value="";
+        }
+        function mover()
+        {
+            alert("Enter your name here");
+        }
+        function kpress()
+        {
+            //alert("Good");
+        }*/
+        function pro()
+        {
+            var name=prompt("Please Enter your name","Your name here");
+        }
+        function checkop()
+        {
+            var a=document.getElementsByName("ck");
+            var count =0;
+            for(var i=0;i<a.length;i++)
+            {
+                if(a[i].checked)
+                {
+                    count++;
+                }
+            }
+            if(count<3)
+                alert("You have checked only "+count+" checkbox");
+            else
+                alert("Good");
+        }
+        function gourl()
+        {
+            var u=document.getElementById("gurl").value;
+            //location.assign(u);
+            window.open(u);
+        }
+        function surl()
+        {
+            window.open(document.getElementById("search").value + document.getElementById("category").value);
+        }
+        function func1()
+        {
+            var string1=document.getElementById("naam").value;
+            if(string1.length === 0)
+                document.getElementById("comment").innerHTML="Name cannot be empty!";
+            else
+                document.getElementById("comment").innerHTML="";
+        }
+    </script>
+    </body>
+</html>

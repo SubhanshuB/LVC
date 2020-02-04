@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Live Virtual Class</title>
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+        <header>
+            <H1>
+                Live Virtual Class
+            </H1>
+        </header>
+        <nav>
+            <p>
+            <a href="index.html">HOME&nbsp; </a>|&nbsp;
+            <a href="All Courses.html">All Courses&nbsp;</a>|&nbsp;
+            <a href="Gallery.html">Gallery&nbsp;</a>|&nbsp;
+            <a href="Registration.html">Registration&nbsp;</a>|&nbsp;
+            <a href="Contacts.html">Contacts&nbsp;</a>&nbsp;
+            </p>
+        </nav>
+        <form method="GET" action="index.html" onsubmit="return vali" name="form1">
+            Name:<br>
+            <input type="text" name="name"><br><br><br><br>
+            Gender:<br>
+            <input type="radio" name="gender" value="male" required>Male
+            <input type="radio" name="gender" value="female">Female<br><br><br><br>
+            Course:<br>
+            <input type="checkbox" name="angular"> Angular JS
+            <input type="checkbox" name="jquery"> JQuery
+            <br><br><br><br>Country:<br>
+            <select >
+                <option value="India" disabled >Please select a country</option>
+                <option value="India">India</option>
+                <option value="India">USA</option>
+                <option value="India">UK</option>
+            </select>
+            <br><br><br><br>
+            Remarks:<br>
+            <textarea rows="5" cols="40"></textarea><br>
+            <br><br><br>
+            <input type="submit" name="Submit" value="SUBMIT">
+        </form>
+        </body>
+        </html>
