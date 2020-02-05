@@ -49,6 +49,7 @@ footer
 div.red
 {
     filter: sepia(50%);
+    padding: 10px;
 }
 div.red:hover
 {
